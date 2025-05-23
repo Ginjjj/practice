@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name = "viewport" content="width=device-width, intial-scale=1.0">
+    <title>rot13</title>
+
+    <link rel="stylesheet" href="./style.css">
+    
+    
+</head>
+<body>
+    <div class="big">
+        <div class = "panel left">
+            <label class="tip" >Введите текст на английском:</label><br>
+            <form id="field" class="field">
+                
+                <textarea id="textInput" class="textInput" name="textInput"></textarea><br><br>
+                <button type="submit" class="submit">Зашифровать</button>
+            </form>
+        </div>
+
+        <div class="panel right">
+            <label class="tip" >Зашифрованный текст:</label><br>
+            <p id="result" class="result"></p>
+        </div>
+    </div> 
+    <script src="code.js"></script>  
+</body>
+</html>
