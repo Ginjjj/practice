@@ -39,10 +39,13 @@ function rot13(input) {
   return result;
 }
 
-document.getElementById("field").addEventListener("submit", function (event) {
-  event.preventDefault();
-
-  const encryptedText = rot13(document.getElementById("textInput").value);
-
-  document.getElementById("result").textContent = encryptedText;
-});
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = { rot13 };
+} else {
+  document.getElementById("field").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const input = document.getElementById("textInput").value;
+    const result = rot13(input);
+    document.getElementById("result").textContent = result;
+  });
+}
